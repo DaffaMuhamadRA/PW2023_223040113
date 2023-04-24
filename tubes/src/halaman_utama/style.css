@@ -1,0 +1,30 @@
+@media all and (min-width: 992px) {
+  .navbar .nav-item .dropdown-menu {
+    display: none;
+  }
+  .navbar .nav-item:hover .nav-link {
+  }
+  .navbar .nav-item:hover .dropdown-menu {
+    display: block;
+  }
+  .navbar .nav-item .dropdown-menu {
+    margin-top: 0;
+  }
+  .navbar-brand {
+    color: #cabbe9;
+    -webkit-text-stroke-width: 0.8px;
+    -webkit-text-stroke-color: black;
+  }
+  /* .btn:hover{
+    background-color: #1F8A70;
+    outline: #ffff; */
+}
+.collapse ul li a {
+  color: black;
+}
+.nav-link:hover {
+  color: #fdfdfd;
+}
+.active {
+  text-decoration: overline red;
+}
