@@ -1,0 +1,80 @@
+html,
+body {
+  font-family: 'poppins';
+  font-size: 15px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  margin: 0;
+  overflow-x: hidden;
+  top: 0;
+  left: 0;
+}
+
+.navbar {
+  background: white;
+  padding: 3rem 2rem;
+  height: 0rem;
+  min-height: 12vh;
+}
+.navbar .navbar-brand a {
+  padding: 1rem;
+  display: block;
+  text-decoration: none;
+}
+
+.navbar-toggler {
+  background-color: red;
+  border: none;
+  padding: 10px 6px;
+  outline: none;
+}
+
+.navbar-toggler span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border: 1px;
+  background: white;
+}
+.navbar-toggler span + span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border: 1px;
+  background: white;
+}
+.navbar-toggler span + span + span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border: 1px;
+  background: white;
+}
+
+.navbar-expand-lg .navbar-link .navbar-nav {
+  padding: 2rem 1.2rem;
+  font-size: 1.4rem;
+  position: relative;
+}
+
+.navbar-expand-lg .navbar-link .navbar-nav::hover {
+  border-top: 4px solid red;
+}
+.navbar-expand-lg .navbar-link .navbar-nav::active {
+  border-top: 4px solid red;
+  color: red;
+}
+.navbar-nav button {
+  padding: 1.2rem 0;
+}
+.navbar-nav .btn {
+  background-color: bisque;
+  color: white;
+  border-radius: 0;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  margin-top: 1px;
+}
+.navbar-nav .btn:hover {
+  background-color: blue;
+}
