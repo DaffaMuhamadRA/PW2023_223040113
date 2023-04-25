@@ -89,17 +89,17 @@
     margin-right: 300px;
   }
 
-  .account button {
+  /* .account button {
     color: #e74c3c;
     border-color: #e74c3c;
-  }
+  } */
   .account a {
     color: white;
     text-decoration: none;
   }
   .log {
     text-align: center !important;
-    width: 45px;
+    width: 50px;
     height: 28px;
     background-color: #f7341e;
     border-radius: 10%;
@@ -155,4 +155,77 @@
     border-top: 4px solid #e74c3c;
     color: #e74c3c;
   }
+  /* -----------account log-in */
+  .account,
+  .account a {
+    text-decoration: none;
+    color: black;
+    list-style-type: none;
+    
+  }
+  .account a {
+    color: white;
+    text-decoration: none;
+  }
+  .log {
+    text-align: center !important;
+    width: 50px;
+    height: 28px;
+    background-color: #f7341e;
+    border-radius: 10%;
+  }
+  .log:hover {
+    background-color: #920f00;
+  }
+  /* ---------background image */
+  .heroimage {
+    background-image: url(../../image/mentah/ruang_rumahsakit.png) !important;
+    background: no-repeat center center;
+    background-size: cover;
+    min-height: 70vh;
+    position: relative;
+    color: white;
+  }
+  .color-overlay {
+    position: absolute;
+    width: 100%;
+    height: 70vh;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  /* ---------- search-bar */
+  .search-bar {
+    width: 100%;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+  }
+  .search-bar input {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 20px;
+    color: #ffffff;
+  }
+  ::placeholder {
+    color: #a2afb4;
+  }
+  .search-bar p {
+    font-size: 25px;
+    padding-top: 10px;
+    margin-right: 5px;
+  }
+  .search-bar button {
+    color: rgb(134, 186, 235);
+    font-size: 25px;
+  }
+  .search-bar button :hover {
+    color: rgb(42, 105, 240);
+  }
+}
+
 }
