@@ -5,6 +5,7 @@
   font-family: ;
 }
 @media all and (min-width: 992px) {
+  /* ------------------------------- navbar */
   .navbar .nav-item .dropdown-menu {
     display: none;
   }
@@ -32,6 +33,10 @@
     width: 200px;
     height: 40px;
   }
+  .dropdown-item:hover {
+    color: white;
+    background-color: #e74c3c;
+  }
   .navbar-expand-lg .navbar-nav .nav-link {
     font-size: 18px;
     position: relative;
@@ -45,6 +50,7 @@
     border-top: 4px solid #e74c3c;
     color: #e74c3c;
   }
+  /* ------------------------------------------------ hero */
   .heroimage {
     background-image: url(../../image/mentah/ruang_rumahsakit.png) !important;
     background: no-repeat center center;
@@ -119,10 +125,10 @@
     outline: none;
     padding: 24px 20px;
     font-size: 20px;
-    color: #faf9f9;
-  }
-  :placeholder {
     color: #ffffff;
+  }
+  ::placeholder {
+    color: #919fa5;
   }
   .search-bar p {
     font-size: 25px;
@@ -130,11 +136,11 @@
     margin-right: 5px;
   }
   .search-bar button {
-    color: white;
+    color: rgb(134, 186, 235);
     font-size: 25px;
   }
   .search-bar button :hover {
-    color: aqua;
+    color: rgb(42, 105, 240);
   }
 }
 
