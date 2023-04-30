@@ -1,0 +1,18 @@
+.background-radial-gradient img {
+    display: flex;
+    position: absolute;
+    background-color: hsl(218, 41%, 15%);
+    width: 100%;
+    background: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.bg-glass {
+    background-color: hsla(0, 0%, 100%, 0.9) !important;
+    backdrop-filter: saturate(200%) blur(10px);
+}
+
+.already-have-acc {
+    margin-top: 50px;
+}
