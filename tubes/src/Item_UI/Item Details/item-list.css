@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: ; */
+}
+
+@media all and (min-width: 991px) {
+
+    /* ------------------------------- navbar */
+    .navbar .nav-item .dropdown-menu {
+        display: none;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        display: inline-block;
+    }
+
+    .navbar .nav-item .dropdown-menu {
+        margin-top: 0px;
+    }
+
+    .navbar-brand {
+        color: #e74c3c;
+        -webkit-text-stroke-width: 0.8px;
+        -webkit-text-stroke-color: black;
+        margin-left: 20px;
+    }
+
+    .submit-btn {
+        font-size: 20px;
+    }
+
+    .collapse ul li a {
+        color: black;
+    }
+
+    .form-control {
+        font-size: 16px;
+        margin-top: 2px;
+        width: 200px;
+        height: 40px;
+    }
+
+    .dropdown-item:hover {
+        color: white;
+        background-color: #e74c3c;
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-link {
+        font-size: 18px;
+        position: relative;
+        margin: 0px 10px 0px 10px;
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-link:hover {
+        color: #fdfdfd;
+        border-top: 4px solid #e74c3c;
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-link:active {
+        border-top: 4px solid #e74c3c;
+        color: #e74c3c;
+    }
+
+    /* ------------ account navbar */
+    .account a {
+        text-decoration: none;
+        list-style-type: none;
+        color: white;
+        text-decoration: none;
+    }
+
+
+    .account p {
+        font-size: 20px;
+        border: 10px;
+        border-color: red;
+    }
+
+    .account a:hover {
+        color: #f8f7f7;
+    }
+
+    /* .submit-btn i {
+      color: white;
+    } */
+
+    /* .submit-btn i:hover {
+      color: rgb(192, 192, 241);
+    } */
+
+    .navbar-collapse {
+        margin-right: 300px;
+    }
+
+    /* .account button {
+    color: #e74c3c;
+    border-color: #e74c3c;
+  } */
+
+    .log {
+        text-align: center !important;
+        width: 60px;
+        height: 30px;
+        background-color: #f7341e;
+        border-radius: 10%;
+    }
+
+    .log:hover {
+        background-color: #920f00;
+    }
+
+    /* ----------------------------------------------------------------- ITEM KATEGORI */
+    /* --------------------------------------------- item-page */
+    .bgcolor {
+        display: flex;
+        position: relative;
+        height: 2300px;
+        background-color: rgb(245, 245, 245);
+    }
+
+    .bggrey {
+        background-color: rgb(230, 230, 230);
+        width: 100%;
+        height: 200px;
+        display: flex;
+        position: relative;
+
+    }
+
+
+    /* --------------------------------------------- item-list */
+    .container-item {
+        background-color: rgb(255, 255, 255);
+        /* border: red 2px solid; */
+        border-radius: 10px;
+        height: 2100px;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        margin-top: 100px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    }
+
+    .item-list {
+        border: red 2px solid;
+        display: grid;
+    }
+
+    .item-list a {
+        width: 700px;
+        height: 50px;
+        background-color: yellow;
+        border: #f7341e 2px solid;
+        color: black;
+    }
+
+    /* .bgcolor h5 {
+        position: absolute;
+    } */
+
+
+    /* ---------------------------------- input-group  */
+    .input-group {
+        margin-top: 30px;
+        /* border: blue 2px solid; */
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        width: 1200px;
+        height: 50px;
+    }
+
+    .item-form-control {
+        height: 55px;
+    }
+
+    .item-form button {
+        font-size: 20px;
+    }
+
+    .item-form button {
+        background-color: #e74c3c;
+        color: white;
+
+    }
+
+    .item-form button:hover {
+        background-color: #920f00;
+        color: white;
+    }
+
+    /* ------------------------------------------------------------------------------------ item details */
+    .item-details {
+        margin-top: 50px;
+    }
+
+    .item-details-tengah button {
+        margin-top: 10px;
+    }
+
+    .item-details-tengah h5 {
+        margin-top: 20px;
+    }
+
+    .grid-kanan-item-details .card {
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------- media responsive */
+@media only screen and (min-width: 280px) and (max-width: 990px) {
+    .nav-link {
+        font-size: 10px;
+    }
+
+    .navbar-brand {
+        color: #cabbe9;
+        -webkit-text-stroke-width: 0.8px;
+        -webkit-text-stroke-color: black;
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-link:active {
+        border-top: 4px solid #e74c3c;
+        color: #e74c3c;
+    }
+
+    /* -------------------------------------account log-in */
+    .account,
+    .account a {
+        text-decoration: none;
+        color: black;
+        list-style-type: none;
+    }
+
+    .account a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .log {
+        text-align: center !important;
+        width: 50px;
+        height: 28px;
+        background-color: #f7341e;
+        border-radius: 10%;
+    }
+
+    .log:hover {
+        background-color: #920f00;
+    }
+
+    /* ---------------------------------- background image */
+    .heroimage {
+        background-image: url(../../image/mentah/ruang_rumahsakit.png) !important;
+        background: no-repeat center center;
+        background-size: cover;
+        min-height: 70vh;
+        position: relative;
+        color: white;
+    }
+
+    .color-overlay {
+        position: absolute;
+        width: 100%;
+        height: 70vh;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* ----------------------------------------- search-bar */
+    .search-bar {
+        width: 100%;
+        max-width: 700px;
+        background: rgba(255, 255, 255, 0.2);
+        display: flex;
+        align-items: center;
+        border-radius: 60px;
+        padding: 10px 20px;
+    }
+
+    .search-bar input {
+        background: transparent;
+        flex: 1;
+        border: 0;
+        outline: none;
+        padding: 24px 20px;
+        font-size: 20px;
+        color: #ffffff;
+    }
+
+    ::placeholder {
+        color: #a2afb4;
+    }
+
+    .search-bar p {
+        font-size: 25px;
+        padding-top: 10px;
+        margin-right: 5px;
+    }
+
+    .search-bar button {
+        color: rgb(134, 186, 235);
+        font-size: 25px;
+    }
+
+    .search-bar button :hover {
+        color: rgb(42, 105, 240);
+    }
+
+
+}
