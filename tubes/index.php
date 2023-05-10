@@ -7,97 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <!-- boostrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" />
   <!-- css -->
   <link rel="stylesheet" href="src/views/halaman_utama/style.css" />
   <!-- php css external -->
+  <style>
+
+  </style>
 </head>
 
 <body>
   <!-- ----------------------------------------------------------------------------------------- navbar -->
-
-  <nav class="navbar navbar-expand-lg" style="background-color: #a1eafb">
-    <div class="container-fluid ">
-      <a class="navbar-brand" href="#">
-        <h2>HealthCare</h2>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 justify-content-center">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Beranda</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Profile</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">🏥 Fasilitas & layanan</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-              Layanan Khusus
-            </a>
-            <ul class="dropdown-menu">
-              <li>
-                <a class="dropdown-item" href="#"> Vaksinasi COVID-19 </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#"> Kesehatan Jantung </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#"> Kesehatan Mental </a>
-              </li>
-              <li><a class="dropdown-item" href="#"> Kesehatan hewan </a></li>
-              <li>
-                <a class="dropdown-item" href="#"> Kesehatan Seksual </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-              Penunjang Kesehatan
-            </a>
-            <ul class="dropdown-menu">
-              <li>
-                <a class="dropdown-item" href="#"> Kelender Menstruasi </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#"> Kalkulator BMI </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#"> Tes Gangguan Kecemasan </a>
-              </li>
-              <li><a class="dropdown-item" href="#"> Tes Depresi </a></li>
-              <li>
-                <a class="dropdown-item" href="#"> Donasi </a>
-              </li>
-            </ul>
-          <li class="nav-item">
-            <a class="nav-link" href="#">💊 Toko Kesehatan </a>
-          </li>
-          </li>
-        </ul>
-
-        <!-- ------------------ account  -->
-
-        <!-- <i class="bi bi-person-circle">
-
-              </i>
-                </a>
-                </li> -->
-
-      </div>
-      <li class=" account me-auto collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="log">
-          <a href="#">Login</a>
-        </div>
-    </div>
-  </nav>
+  <?php require('src/partials/navbar/navbar.php'); ?>
   <!-- ----------------------------------------------------------------------------------------- home page -->
   <!-- hero image -->
   <div class="heroimage">
@@ -253,15 +175,11 @@
           <div class="text-center text-md right">
             <ul class="list-unstyled list-inline">
               <li class="list-inline-item">
-                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
-                    class="bi bi-facebook"></i></a>
+                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-facebook"></i></a>
               </li>
-              <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white"
-                  style="font-size: 23px;"><i class="bi bi-twitter"></i></a></li>
-              <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white"
-                  style="font-size: 23px;"><i class="bi bi-instagram"></i></a></li>
-              <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white"
-                  style="font-size: 23px;"><i class="bi bi-youtube"></i></a></li>
+              <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-twitter"></i></a></li>
+              <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-instagram"></i></a></li>
+              <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-youtube"></i></a></li>
             </ul>
           </div>
         </div>
@@ -270,11 +188,9 @@
   </footer>
 
   <!-- java bootsrap -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
-    integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous">
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
-    integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous">
   </script>
 </body>
 

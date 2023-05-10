@@ -123,7 +123,7 @@
 
     /* ------------------------------------------------ hero */
     .heroimage {
-        background-image: url(../../../image/mentah/ruang_rumahsakit.png) !important;
+        background-image: url(../../../../image/mentah/ruang_rumahsakit.png) !important;
         background: no-repeat center center;
         background-size: cover;
         min-height: 80vh;

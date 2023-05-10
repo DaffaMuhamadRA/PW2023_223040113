@@ -133,7 +133,7 @@
     /* --------------------------------------------- item-list */
     .container-item {
         background-color: rgb(255, 255, 255);
-        /* border: red 2px solid; */
+        border: red 2px solid;
         border-radius: 10px;
         height: 1500px;
         position: absolute;
@@ -151,23 +151,23 @@
         display: grid;
     }
 
-    .item-list a {
+    /* .item-list a {
         width: 700px;
         height: 50px;
         background-color: yellow;
         border: #f7341e 2px solid;
         color: black;
-    }
+    } */
 
     .bgcolor h5 {
-        position: absolute;
+        position: relative;
     }
 
 
     /* ---------------------------------- input-group  */
     .input-group {
         margin-top: 20px;
-        /* border: blue 2px solid; */
+        border: blue 2px solid;
         margin-left: auto;
         margin-right: auto;
         left: 0;
@@ -252,6 +252,15 @@
 
     /* --------------------------------------------------------------------------------------------------- Grid kanan */
     .grid-kanan {}
+
+    .judul-obat {
+        margin-top: 20px;
+    }
+
+    .grid-kanan-item .row .col {
+        margin-top: 50px;
+    }
+
 }
 
 
