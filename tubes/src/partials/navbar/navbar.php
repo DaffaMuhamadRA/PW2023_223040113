@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg" style="background-color: #a1eafb">
+<nav class="navbar navbar-expand-lg" style="background-color:#8294C4">
   <div class="container-fluid ">
     <a class="navbar-brand" href="#">
       <h2>HealthCare</h2>
