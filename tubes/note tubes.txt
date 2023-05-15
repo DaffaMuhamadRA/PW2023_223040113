@@ -2,9 +2,9 @@ note :
 
 Pr buat tubes website
 
-1. hilangin page berbayar, jadi haya sekedar informasi untuk obat
+1. hilangin page berbayar, jadi haya sekedar informasi untuk obat (on-going)
 2. color pallet gunain yang berpotensi memberikan kenyamanan mata pada user
 3. responsive page
 4. basis data untuk laman searching obat, dan kategori obat
 5. perbanyak tampilan untuk obat
-6. ganti index jadi tampilan log in untuk mempermudah pengerjaan
+6. ganti index jadi tampilan log in untuk mempermudah pengerjaan (v)

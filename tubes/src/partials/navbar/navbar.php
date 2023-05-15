@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg" style="background-color:#8294C4">
+<nav class="navbar navbar-expand-lg" style="background-color: #a1eafb">
   <div class="container-fluid ">
     <a class="navbar-brand" href="#">
       <h2>HealthCare</h2>
@@ -14,12 +14,9 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Profile</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">🏥 Fasilitas & layanan</a>
-        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-            Layanan Khusus
+            Artikel
           </a>
           <ul class="dropdown-menu">
             <li>
@@ -43,15 +40,8 @@
           </a>
           <ul class="dropdown-menu">
             <li>
-              <a class="dropdown-item" href="#"> Kelender Menstruasi </a>
-            </li>
-            <li>
               <a class="dropdown-item" href="#"> Kalkulator BMI </a>
             </li>
-            <li>
-              <a class="dropdown-item" href="#"> Tes Gangguan Kecemasan </a>
-            </li>
-            <li><a class="dropdown-item" href="#"> Tes Depresi </a></li>
             <li>
               <a class="dropdown-item" href="#"> Donasi </a>
             </li>
@@ -72,8 +62,27 @@
 
     </div>
     <li class=" account me-auto collapse navbar-collapse" id="navbarSupportedContent">
-      <div class="log">
-        <a href="#">Login</a>
+      <div class="notif">
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end n-button">
+          <button class="btn  me-md-2" type="button"><i class="bi bi-bell-fill"></i></button>
+        </div>
       </div>
+      <div class="dropdown u-drop">
+        <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="bi bi-person-circle"> User</i>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#"><i class="bi bi-person-bounding-box"></i> Your Account</a>
+          </li>
+          <li><a class="dropdown-item" href="#"><i class="bi bi-gear"></i> Setting</a></li>
+          <li><a class="dropdown-item" href="#"><i class="bi bi-people-fill"></i> Switch account</a></li>
+          <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right"></i> Sign out</a></li>
+        </ul>
+      </div>
+    </li>
+  </div>
+
+  </div>
+
   </div>
 </nav>
