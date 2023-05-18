@@ -211,6 +211,11 @@
         text-align: start;
     }
 
+    .kategori-obat a {
+        text-decoration: none;
+        color: black;
+    }
+
     /* -------------------------------------------------- item grid */
     .item-grid1 {
         margin-top: 50px;

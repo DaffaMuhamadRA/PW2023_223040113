@@ -2,9 +2,28 @@ note :
 
 Pr buat tubes website
 
-1. hilangin page berbayar, jadi haya sekedar informasi untuk obat (on-going)
-2. color pallet gunain yang berpotensi memberikan kenyamanan mata pada user
-3. responsive page
-4. basis data untuk laman searching obat, dan kategori obat
-5. perbanyak tampilan untuk obat
-6. ganti index jadi tampilan log in untuk mempermudah pengerjaan (v)
+bag 1 (UI Build)
+
+- hilangin page berbayar, jadi haya sekedar informasi untuk obat (v)
+- perbanyak tampilan untuk obat (v)
+- ganti index awal jadi tampilan log in untuk mempermudah pengerjaan (v)
+- tampilan UI Item Kategori (on going)
+
+bag 2 (Penyelarasan UI)
+
+- responsive page
+- color pallet gunain yang berpotensi memberikan kenyamanan mata pada user
+- icon profile ke lebih kananin - me 
+- ganti html ke php (DRYS)
+
+bag 3 (Back end)
+- basis data untuk laman searching obat, dan kategori obat
+- live search
+- Data log in
+- Update
+- Delete
+- Insert
+- Tabel user
+- Menggunakan relasi antar tabel (tambah 1 tabel baru).
+
+bag 4 (penambahan)
