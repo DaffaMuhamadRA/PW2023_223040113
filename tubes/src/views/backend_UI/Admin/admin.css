@@ -74,24 +74,6 @@
         margin-right: 10px;
     }
 
-    .cart button {
-        border-radius: 50%;
-        margin-right: 10px;
-    }
-
-    .log .dropdown {
-        text-align: center !important;
-        background-color: #f7341e;
-        border-radius: 10%;
-    }
-
-
-    .log {
-        display: flex;
-        flex-direction: row;
-
-    }
-
     .u-drop button {
         color: white;
         background-color: #f7341e;
@@ -217,6 +199,7 @@
         margin-top: 50px;
     }
 
+
     /* -------------------------------------pagination */
     .pagination {
         margin-top: 100px;
@@ -276,16 +259,46 @@
         text-decoration: none;
     }
 
-    .log {
-        text-align: center !important;
-        width: 50px;
-        height: 28px;
-        background-color: #f7341e;
-        border-radius: 10%;
+    .account {
+        display: flex;
     }
 
-    .log:hover {
-        background-color: #920f00;
+    .account-drop li a {
+        color: black;
+    }
+
+    .notif button {
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    .u-drop button {
+        color: white;
+        background-color: #f7341e;
+    }
+
+    .u-drop button:hover {
+        color: rgb(221, 219, 219);
+        background-color: #dd1e09;
+    }
+
+
+
+
+    .notif button {
+        color: white;
+        margin-top: 10px;
+        background-color: #f7341e;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+
+    .n-button :hover {
+        margin-top: 10px;
+        color: rgb(221, 219, 219);
+        background-color: #dd1e09;
+        border-radius: 50%;
+        margin-bottom: 10px;
     }
 
     /* ---------------------------------- background image */
@@ -306,6 +319,22 @@
     }
 
     /* ----------------------------------------- search-bar */
+    .heroimage {
+        background-image: url(../../../../image/mentah/ruang_rumahsakit.png) !important;
+        background: no-repeat center center;
+        background-size: cover;
+        min-height: 80vh;
+        position: relative;
+        color: white;
+    }
+
+    .color-overlay {
+        position: absolute;
+        width: 100%;
+        height: 80vh;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
     .search-bar {
         width: 100%;
         max-width: 700px;
@@ -350,10 +379,25 @@
         display: flex;
         /* border: #2da2d4 2px solid; */
         overflow-x: hidden;
+        flex-direction: column;
+    }
+
+    .card-item {
+        display: flex !important;
+        flex-direction: column;
+    }
+
+    .col-4 {
+        width: 300px;
+    }
+
+    .col-4 {
+        box-sizing: content-box;
     }
 
     /* -------------------- main content */
     .main-content {
         flex-wrap: wrap;
     }
+
 }

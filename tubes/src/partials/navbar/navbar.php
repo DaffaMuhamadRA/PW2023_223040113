@@ -61,24 +61,26 @@
                 </li> -->
 
     </div>
-    <li class=" account me-auto collapse navbar-collapse" id="navbarSupportedContent">
-      <div class="notif">
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end n-button">
-          <button class="btn  me-md-2" type="button"><i class="bi bi-bell-fill"></i></button>
+    <ul>
+      <li class=" account me-auto collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="notif">
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end n-button">
+            <button class="btn  me-md-2" type="button"><i class="bi bi-bell-fill"></i></button>
+          </div>
         </div>
-      </div>
-      <div class="dropdown u-drop">
-        <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <i class="bi bi-person-circle"> User</i>
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#"><i class="bi bi-person-bounding-box"></i> Your Account</a>
-          </li>
-          <li><a class="dropdown-item" href="#"><i class="bi bi-gear"></i> Setting</a></li>
-          <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right"></i> Sign out</a></li>
-        </ul>
-      </div>
-    </li>
+        <div class="dropdown u-drop">
+          <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-person-circle"> User</i>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#"><i class="bi bi-person-bounding-box"></i> Your Account</a>
+            </li>
+            <li><a class="dropdown-item" href="#"><i class="bi bi-gear"></i> Setting</a></li>
+            <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right"></i> Sign out</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
   </div>
 
   </div>

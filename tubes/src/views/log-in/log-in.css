@@ -16,3 +16,11 @@
 .dont-have-acc {
     margin-top: 50px;
 }
+
+@media only screen and (min-width: 280px) and (max-width: 990px) {
+    .background-radial-gradient img {
+        background-size: cover;
+        height: 200vh;
+        background: no-repeat;
+    }
+}

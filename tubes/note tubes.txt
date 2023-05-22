@@ -4,17 +4,17 @@ Pr buat tubes website
 
 bag 1 (UI Build)
 
-- hilangin page berbayar, jadi haya sekedar informasi untuk obat (v)
-- perbanyak tampilan untuk obat (v)
-- ganti index awal jadi tampilan log in untuk mempermudah pengerjaan (v)
-- tampilan UI Item Kategori (on going)
+- hilangin page berbayar, jadi haya sekedar informasi untuk obat (done)
+- perbanyak tampilan untuk obat (done)
+- ganti index awal jadi tampilan log in untuk mempermudah pengerjaan (done)
+- tampilan UI Item Kategori (done)
 
 bag 2 (Penyelarasan UI)
 
-- responsive page
+- responsive page (done)
 - color pallet gunain yang berpotensi memberikan kenyamanan mata pada user
 - icon profile ke lebih kananin - me 
-- ganti html ke php (DRYS)
+- ganti html ke php (DRYS) -> (done)
 
 bag 3 (Back end)
 - basis data untuk laman searching obat, dan kategori obat
@@ -27,3 +27,4 @@ bag 3 (Back end)
 - Menggunakan relasi antar tabel (tambah 1 tabel baru).
 
 bag 4 (penambahan)
+- Night Mode
