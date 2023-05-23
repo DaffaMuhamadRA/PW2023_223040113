@@ -2,6 +2,9 @@ note :
 
 Pr buat tubes website
 
+on-going now ! : *belajar PHP dari PHP list WPU*
+
+
 bag 1 (UI Build)
 
 - hilangin page berbayar, jadi haya sekedar informasi untuk obat (done)
@@ -17,14 +20,30 @@ bag 2 (Penyelarasan UI)
 - ganti html ke php (DRYS) -> (done)
 
 bag 3 (Back end)
-- basis data untuk laman searching obat, dan kategori obat
-- live search
-- Data log in
-- Update
-- Delete
-- Insert
-- Tabel user
-- Menggunakan relasi antar tabel (tambah 1 tabel baru).
+
+easy :
+- Tampil : Data tampil pada halaman user (back-end), halaman admin (front-end) dan 
+ada halaman detail / profile.
+• Insert : Bisa menambah data lewat halaman admin.
+• Update : Bisa mengubah data lewat halaman admin. 
+• Delete : Bisa menghapus data lewat halaman admin.
+• Search : Bisa mencari data pada halaman admin dan halaman user.
+• Aplikasi bisa mengupload foto (bisa melakukan validasi terhadap jenis foto).
+• Minimal 1 table pada database.
+• Upload ke github
+
+medium :
+- Mengerjakan tingkatan easy.
+• Ada fungsi login, logout & registrasi (untuk admin).
+• Menambahkan tabel user. 
+• Mengaplikasikan fungsi live searching.
+• Menggunakan relasi antar tabel (tambah 1 tabel baru).
+
+hard :
+• Mengerjakan tingkatan easy & medium.
+• PDF Reporting.
+• Web Hosting.
+• Mengurutkan data yang ditampilkan sesuai urutan sesuai kategori.
 
 bag 4 (penambahan)
 - Night Mode
