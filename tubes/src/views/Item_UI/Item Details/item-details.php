@@ -1,3 +1,9 @@
+<?php
+require '../../../partials/functions/functions.php';
+
+$obat = query("SELECT * FROM item");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,8 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!-- boostrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" />
     <!-- css -->
     <link rel="stylesheet" href="item-details.css" />
@@ -16,90 +21,7 @@
 
 <body>
     <!-- ----------------------------------------------------------------------------------------- navbar -->
-    <nav class="navbar navbar-expand-lg" style="background-color: #a1eafb">
-        <div class="container-fluid ">
-            <a class="navbar-brand" href="#">
-                <h2>HealthCare</h2>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 justify-content-center">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Beranda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">🏥 Fasilitas & layanan</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">🕛Jadwal Praktik</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                            Layanan Khusus
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a class="dropdown-item" href="#"> Vaksinasi COVID-19 </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#"> Kesehatan Jantung </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#"> Kesehatan Mental </a>
-                            </li>
-                            <li><a class="dropdown-item" href="#"> Kesehatan hewan </a></li>
-                            <li>
-                                <a class="dropdown-item" href="#"> Kesehatan Seksual </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                            Penunjang Kesehatan
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a class="dropdown-item" href="#"> Kelender Menstruasi </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#"> Kalkulator BMI </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#"> Tes Gangguan Kecemasan </a>
-                            </li>
-                            <li><a class="dropdown-item" href="#"> Tes Depresi </a></li>
-                            <li>
-                                <a class="dropdown-item" href="#"> Donasi </a>
-                            </li>
-                        </ul>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">💊 Toko Kesehatan </a>
-                    </li>
-                    </li>
-                </ul>
-
-                <!-- ------------------ account  -->
-
-                <!-- <i class="bi bi-person-circle">
-
-              </i>
-                </a>
-                </li> -->
-
-            </div>
-            <li class=" account me-auto collapse navbar-collapse" id="navbarSupportedContent">
-                <div class="log">
-                    <a href="#">Login</a>
-                </div>
-        </div>
-    </nav>
+    <?php require("../../../partials/navbar/navbar.php"); ?>
     <!-- ----------------------------------------------------------------------------------------- item page -->
 
     <div class="bgcolor item-page">
@@ -108,9 +30,7 @@
         <div class="item-list">
             <div class="container container-item">
                 <div class="input-group mb-3 item-form">
-                    <input type="text" class="form-control item-form-control"
-                        placeholder="Example : Paracetamol, Vitamin C, or Covid-19" aria-label="Recipient's username"
-                        aria-describedby="button-addon2">
+                    <input type="text" class="form-control item-form-control" placeholder="Example : Paracetamol, Vitamin C, or Covid-19" aria-label="Recipient's username" aria-describedby="button-addon2">
                     <button class="btn item-btn" type="button" id="button-addon2"><i class="bi bi-search">
                             Cari</i></button>
                 </div>
@@ -154,9 +74,6 @@
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis eveniet accusantium
                                 aspernatur iusto odit eos. Error architecto et labore at?</p>
                             <hr>
-                            <h5>Aturan Pakai</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, facilis!</p>
-                            <hr>
                             <h5>Kontra Indikasi</h5>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates illum nihil
                                 laboriosam quidem aliquid odit repudiandae dolorem minima consequatur molestiae?</p>
@@ -169,7 +86,7 @@
                             <h5>Golongan Produk</h5>
                             <p>Lorem ipsum dolor sit amet.</p>
                             <hr>
-                            <h5>Kecemasan</h5>
+                            <h5>Kemasan</h5>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam, voluptatem.</p>
                             <hr>
                             <h5>manufaktur</h5>
@@ -245,76 +162,12 @@
     </div>
 
     <!-- -----------------------------------------------------------------   footer -->
-    <footer class=" bg-dark text-white pt-5 pb-4">
-        <div class="container text-center text-md-left">
-            <div class="row text-center text-md-left">
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">FashiOn</h5>
-                    <p>a company that stands in the fashion and clothing business that aims to
-                        provide comfort to the
-                        wearer in
-                        the beauty of clothing.</p>
-
-                </div>
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Product</h5>
-                    <p><a href="#" class="text-white" style="text-decoration: none;">Men</a></p>
-                    <p><a href="#" class="text-white" style="text-decoration: none;">Woman</a></p>
-                    <p><a href="#" class="text-white" style="text-decoration: none;">Kid</a></p>
-                </div>
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Get In Touch</h5>
-                    <p><a href="#" class="text-white" style="text-decoration: none;">Your
-                            Account</a></p>
-                    <p><a href="#" class="text-white" style="text-decoration: none;">About</a></p>
-                    <p><a href="#" class="text-white" style="text-decoration: none;">Contact</a></p>
-                    <p><a href="#" class="text-white" style="text-decoration: none;">Help</a></p>
-                </div>
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Company Name</h5>
-                    <p><i class="bi bi-house-fill me-3"></i>Indonesia</p>
-                    <p><i class="bi bi-envelope-at-fill me-3"></i>Fashion@mail.com</p>
-                    <p><i class="bi bi-telephone-fill me-3"></i>+82 34567890</p>
-                    <p><i class="bi bi-telephone-fill me-3"></i>+11 22333444</p>
-                </div>
-            </div>
-            <hr class="mb-4">
-            <div class="row align-items-center">
-                <div class="col-md-7 col-lg-8">
-                    <p>Copyright ©2022 All Right Reserver By :</p>
-                    <!-- <a href="#" style="text-decoration: none"><strong class="text-danger bg-light"> Fashi<span
-                class="text-black">On </span></strong></a> -->
-                    <a class="navbar-brand" href="#">
-                        <h2>HealthCare</h2>
-                    </a>
-                </div>
-                <div class="col-md-5 col-lg-4">
-                    <div class="text-center text-md right">
-                        <ul class="list-unstyled list-inline">
-                            <li class="list-inline-item">
-                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i
-                                        class="bi bi-facebook"></i></a>
-                            </li>
-                            <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white"
-                                    style="font-size: 23px;"><i class="bi bi-twitter"></i></a></li>
-                            <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white"
-                                    style="font-size: 23px;"><i class="bi bi-instagram"></i></a>
-                            </li>
-                            <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white"
-                                    style="font-size: 23px;"><i class="bi bi-youtube"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <?php require("../../../partials/footer/footer.php"); ?>
 
     <!-- java bootsrap -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
-        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous">
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
-        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous">
     </script>
 </body>
 

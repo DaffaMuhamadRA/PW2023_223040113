@@ -1,0 +1,235 @@
+<?php
+require '../../../partials/functions/functions.php';
+
+$obat = query("SELECT * FROM item");
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="admin.css" />
+</head>
+
+<body>
+    <!-- ----------------------------------------------------------------------------------------- navbar -->
+    <?php require('../../../partials/navbar/navbar.php'); ?>
+    <!-- ----------------------------------------------------------------------------------------- home page -->
+    <!-- hero image -->
+    <div class="heroimage">
+        <div class="color-overlay d-flex justify-content-center align-items-center">
+            <form action="" class="search-bar">
+                <input type="text" placeholder="search medicine">
+                <p>|</p>
+                <button class="btn" type="submit"><i class="bi bi-search"></i></button>
+            </form>
+
+        </div>
+    </div>
+    <!-- ----------------------------------- menu -->
+    <div class="main-menu  ">
+        <div class="container-fluid d-flex justify-content-center main-menu-container">
+
+            <div class="navbar-menu">
+                <ul class="nav nav-tabs">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item dropdown item-item">
+                            <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Items </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Add</a></li>
+                                <li><a class="dropdown-item" href="#">Remove</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Log</a>
+                    </li>
+
+
+                </ul>
+
+                <div class="card-container" style="border: red 2px solid;">
+                    <div class="container text-center grid-kiri">
+                        <div class="row grid-item">
+                            <div class="col-lg-4 " style="border: #a1eafb 2px solid;">
+                                <h5>Obat Dan Perawatan</h5>
+                                <div class="accordion accordion-slide-item" id="accordionPanelsStayOpenExample">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                                Batuk, Pilek, & Flu
+                                            </button>
+                                        </h2>
+                                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                                            <div class="accordion-body text-start">
+                                                <a class="" href="#">Batuk & Flu</a> <br> <br>
+                                                <a class="" href="#">Balsem & Minyal Esensial</a> <br> <br>
+                                                <a class="" href="#">Nasal Spray & Dekongestan</a> <br> <br>
+                                                <a class="" href="#">Untuk Bayi & Anak</a> <br> <br>
+                                                <a class="" href="#">Perawatan Herbal</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                                Demam & Nyeri
+                                            </button>
+                                        </h2>
+                                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                                            <div class="accordion-body text-start">
+                                                <a class="" href="#">Pereda Demam & Nyeri</a> <br> <br>
+                                                <a class="" href="#">Untuk Bayi & Anak</a> <br> <br>
+                                                <a class="" href="#">Terapi Panas & Dingin</a> <br> <br>
+                                                <a class="" href="#">Perawatan Herbal</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                                                Infeksi
+                                            </button>
+                                        </h2>
+                                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                                            <div class="accordion-body text-start">
+                                                <a class="" href="#">Antibiotik</a> <br> <br>
+                                                <a class="" href="#">Antijamur</a> <br> <br>
+                                                <a class="" href="#">Antivirus</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                                                Alergi
+                                            </button>
+                                        </h2>
+                                        <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+                                            <div class="accordion-body text-start">
+                                                <a class="" href="#">Obat Alergi</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 bagian-card" style="border: #a1eafb 2px solid;">
+                                <!-- container -->
+                                <div class="container text-center">
+                                    <div class="row g-3 bagian-card-item">
+                                        <?php foreach ($obat as $row) : ?>
+                                            <div class="col-4">
+                                                <div class="p-3">
+                                                    <div class="card ">
+                                                        <img src="../../../../image/obat/<?= $row["gambar"]; ?>" class="card-img-top" alt="...">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title"><?= $row["nama"]; ?></h5>
+                                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        <?php endforeach; ?>
+                                        <!-- card -->
+
+
+
+                                        <!-- pagination -->
+                                        <nav aria-label="Page navigation example ">
+                                            <ul class="pagination d-flex justify-content-center">
+                                                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+        <!-- ----------------------------- main content -->
+        <div class="main-content-wrap">
+            <h1 class="d-flex justify-content-center">main content</h1>
+            <div class="main-content d-flex justify-content-evenly">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's
+                            content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's
+                            content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's
+                            content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's
+                            content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- ------------------------------- footer -->
+        <?php require("../../../partials/footer/footer.php"); ?>
+
+        <!-- java bootsrap -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
