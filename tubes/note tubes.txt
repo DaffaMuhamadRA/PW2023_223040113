@@ -2,7 +2,7 @@ note :
 
 Pr buat tubes website
 
-on-going now ! : *belajar PHP dari PHP list WPU*
+on-going now ! : search
 
 
 bag 1 (UI Build)
@@ -23,14 +23,14 @@ bag 3 (Back end)
 
 easy :
 - Tampil : Data tampil pada halaman user (back-end), halaman admin (front-end) dan 
-ada halaman detail / profile.
-• Insert : Bisa menambah data lewat halaman admin.
-• Update : Bisa mengubah data lewat halaman admin. 
-• Delete : Bisa menghapus data lewat halaman admin.
+ada halaman detail / profile. (done)
+• Insert : Bisa menambah data lewat halaman admin. (done)
+• Update : Bisa mengubah data lewat halaman admin.  (done)
+• Delete : Bisa menghapus data lewat halaman admin. (done)
 • Search : Bisa mencari data pada halaman admin dan halaman user.
-• Aplikasi bisa mengupload foto (bisa melakukan validasi terhadap jenis foto).
-• Minimal 1 table pada database.
-• Upload ke github
+• web bisa mengupload foto (bisa melakukan validasi terhadap jenis foto).
+• Minimal 1 table pada database. (done)
+• Upload ke github (done)
 
 medium :
 - Mengerjakan tingkatan easy.

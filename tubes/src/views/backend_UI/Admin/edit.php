@@ -35,25 +35,23 @@ $obat = query("SELECT * FROM item");
         </div>
     </div>
     <!-- ----------------------------------- menu -->
-    <div class="main_menu  ">
-        <div class="container-fluid d-flex justify-content-center main_menu_container">
+    <div class="main-menu " id="main-menu">
+        <div class="container-fluid d-flex justify-content-center main-menu-container">
 
-            <div class="navbar_menu">
+            <div class="navbar-menu">
                 <?php require("../../../partials/nav-tabs/nav-tabs.php"); ?>
 
                 <div class="card-container" style="border: red 2px solid;">
                     <div class="container text-center grid-kiri">
                         <div class="row grid-item">
                             <div class="col-lg-4 " style="border: #a1eafb 2px solid;">
-
+                                <!-- collapse -->
                                 <?php require("../../../partials/collapse/collapse.php"); ?>
                             </div>
                             <div class="col-lg-8 bagian-card" style="border: #a1eafb 2px solid;">
                                 <!-- container -->
                                 <div class="container text-center">
                                     <div class="row g-3 bagian-card-item">
-
-
                                         <?php foreach ($obat as $row) : ?>
                                             <div class="col-4">
                                                 <div class="p-3">
@@ -61,14 +59,12 @@ $obat = query("SELECT * FROM item");
                                                         <img src="../../../../image/obat/<?= $row["gambar"]; ?>" class="card-img-top" alt="...">
                                                         <div class="card-body">
                                                             <h5 class="card-title"><?= $row["nama"]; ?></h5>
-                                                            <a href="../../Item_UI/Item Details/item_details.php?id=<?= $row["id"]; ?>" class="btn btn-primary">Cek Details</a>
+                                                            <a href="ubah.php?id=<?= $row["id"]; ?>" class="btn btn-warning">Ubah</a> | <a href="hapus.php?id=<?= $row["id"]; ?>" class="btn btn-danger" onclick="return confirm('anda yakin ?');">Hapus</a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         <?php endforeach; ?>
-
-
                                         <!-- card -->
 
 

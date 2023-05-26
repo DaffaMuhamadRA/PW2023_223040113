@@ -1,7 +1,13 @@
 <?php
+
+//koneksi DBMS
 require '../../../partials/functions/functions.php';
 
-$obat = query("SELECT * FROM item");
+//ambil data dari URL
+$id = $_GET["id"];
+$tampil = query("SELECT * FROM item WHERE id = $id")[0];
+
+
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +22,7 @@ $obat = query("SELECT * FROM item");
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" />
     <!-- css -->
-    <link rel="stylesheet" href="item-details.css" />
+    <link rel="stylesheet" href="item_details.css">
 </head>
 
 <body>
@@ -24,76 +30,67 @@ $obat = query("SELECT * FROM item");
     <?php require("../../../partials/navbar/navbar.php"); ?>
     <!-- ----------------------------------------------------------------------------------------- item page -->
 
-    <div class="bgcolor item-page">
+    <div class="bgcolor ">
         <!-- ---------------------------------------------------------------    bgcolor -->
         <!-- -----------------------------------------------------------------  item-list -->
-        <div class="item-list">
-            <div class="container container-item">
-                <div class="input-group mb-3 item-form">
-                    <input type="text" class="form-control item-form-control" placeholder="Example : Paracetamol, Vitamin C, or Covid-19" aria-label="Recipient's username" aria-describedby="button-addon2">
-                    <button class="btn item-btn" type="button" id="button-addon2"><i class="bi bi-search">
-                            Cari</i></button>
-                </div>
+        <div class=" item-list">
+            <div class="container container_item">
+
                 <!-- ---------------------------------------------------------------------------- Detail Item -->
-                <div class="container item-details">
+                <div class="container item_details">
+                    <div class="input-group mb-3 item-form">
+                        <input type="text" class="form-control item-form-control" placeholder="Example : Paracetamol, Vitamin C, or Covid-19" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn item-btn" type="button" id="button-addon2"><i class="bi bi-search">
+                                Cari</i></button>
+                    </div>
                     <div class="row grid-desc">
                         <!-- -------------------------------------------------------------- grid kiri -->
                         <div class="col image-desc">
-                            <img src="..." class="img-thumbnail" alt="...">
+                            <img src="../../../../image/obat/<?= $tampil["gambar"]; ?>" class="img-thumbnail" alt="...">
                         </div>
                         <!-- ------------------------------------------------------------- grid tengah -->
                         <div class="col text-start item-details-tengah">
-                            <h3> Nama Obat</h3>
+                            <!-- nama obat -->
+                            <h3><?= $tampil["nama"]; ?></h3>
                             <div class="d-grid gap-2">
                                 <button class="btn btn-primary" type="button">Button</button>
                             </div>
+                            <!-- deskripsi -->
                             <h5>Deskripsi</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore voluptas harum vitae
-                                molestiae sit illum laboriosam, fuga sunt? Fuga rem minus provident facere molestiae
-                                accusamus tempora. Dolor officia reiciendis repellendus?</p>
+                            <p><?= $tampil["deskripsi"]; ?></p>
                             <hr>
                             <h5>Indikasi Umum</h5>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi, suscipit cumque. Sit
-                                consectetur dignissimos culpa ipsa quaerat inventore quia suscipit. Dolores qui illo
-                                quasi, temporibus porro ratione ipsam iste sed?</p>
+                            <p><?= $tampil["indikasi_umum"]; ?></p>
                             <hr>
                             <h5>Komposisi</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere rerum excepturi
-                                laudantium eligendi, provident atque ipsam dolores. Tenetur dicta omnis accusamus nulla
-                                accusantium temporibus repellendus est itaque. Commodi, praesentium nihil.</p>
+                            <p><?= $tampil["komposisi"]; ?></p>
                             <hr>
                             <h5>Dosis</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quos quam facere, mollitia
-                                magni omnis doloremque beatae nihil dolorum delectus deserunt enim doloribus repudiandae
-                                sapiente aliquid fugiat dolores ad pariatur.</p>
+                            <p><?= $tampil["dosis"]; ?></p>
                             <hr>
                             <h5>Aturan pakai</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, accusamus!</p>
+                            <p><?= $tampil["aturan_pakai"]; ?></p>
                             <hr>
                             <h5>Perhatian</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis eveniet accusantium
-                                aspernatur iusto odit eos. Error architecto et labore at?</p>
+                            <p><?= $tampil["perhatian"]; ?></p>
                             <hr>
                             <h5>Kontra Indikasi</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates illum nihil
-                                laboriosam quidem aliquid odit repudiandae dolorem minima consequatur molestiae?</p>
+                            <p><?= $tampil["kontra_indikasi"]; ?></p>
                             <hr>
                             <h5>Efek Samping</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore earum, ratione
-                                voluptatum libero recusandae dolores tenetur accusamus saepe modi sapiente nihil eius
-                                omnis rerum, pariatur ad aliquid laboriosam, nesciunt officiis?</p>
+                            <p><?= $tampil["efek_samping"]; ?></p>
                             <hr>
                             <h5>Golongan Produk</h5>
-                            <p>Lorem ipsum dolor sit amet.</p>
+                            <p><?= $tampil["golongan_produk"]; ?></p>
                             <hr>
                             <h5>Kemasan</h5>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam, voluptatem.</p>
+                            <p><?= $tampil["kemasan"]; ?></p>
                             <hr>
                             <h5>manufaktur</h5>
-                            <p>Lorem ipsum dolor sit.</p>
+                            <p><?= $tampil["manufaktur"]; ?></p>
                             <hr>
                             <h5>No. Registrasi</h5>
-                            <p>Lorem ipsum dolor sit.</p>
+                            <p><?= $tampil["no_registrasi"]; ?></p>
                         </div>
                         <!-- ---------------------------------------------------------------- grid kanan -->
                         <div class="col grid-kanan-item-details">

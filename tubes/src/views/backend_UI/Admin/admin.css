@@ -35,12 +35,6 @@
         color: black;
     }
 
-    .form-control {
-        font-size: 16px;
-        margin-top: 2px;
-        width: 200px;
-        height: 40px;
-    }
 
     .dropdown-item:hover {
         color: white;
@@ -163,19 +157,19 @@
     }
 
     /* ----------------------- main menu */
-    .main-menu {
+    .main_menu {
         border: #cabbe9 2px solid;
         height: 1000px;
         margin-top: 80px;
     }
 
-    .main-menu-container {
+    .main_menu_container {
         border: #dd1e09 2px solid;
         width: 1700px;
         box-sizing: content-box;
     }
 
-    .navbar-menu {
+    .navbar_menu {
         border: #919fa5 2px solid;
         width: 100%;
     }
