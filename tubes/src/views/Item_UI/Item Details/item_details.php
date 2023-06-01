@@ -46,7 +46,7 @@ $tampil = query("SELECT * FROM item WHERE id = $id")[0];
                     <div class="row grid-desc">
                         <!-- -------------------------------------------------------------- grid kiri -->
                         <div class="col image-desc">
-                            <img src="../../../../image/obat/<?= $tampil["gambar"]; ?>" class="img-thumbnail" alt="...">
+                            <img src="../../../../image/dataFoto/<?= $tampil["gambar"]; ?>" class="img-thumbnail" alt="...">
                         </div>
                         <!-- ------------------------------------------------------------- grid tengah -->
                         <div class="col text-start item-details-tengah">

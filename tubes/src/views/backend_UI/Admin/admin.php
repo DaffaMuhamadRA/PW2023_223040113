@@ -2,6 +2,15 @@
 require '../../../partials/functions/functions.php';
 
 $obat = query("SELECT * FROM item");
+
+
+//tombol cari ditekan
+
+if (isset($_POST["cari"])) {
+    $obat = cari($_POST["keyword"]);
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -26,10 +35,10 @@ $obat = query("SELECT * FROM item");
     <!-- hero image -->
     <div class="heroimage">
         <div class="color-overlay d-flex justify-content-center align-items-center">
-            <form action="" class="search-bar">
-                <input type="text" placeholder="search medicine">
+            <form action="" class="search-bar" method="post">
+                <input type="text" placeholder="search medicine" name="keyword" autocomplete="off">
                 <p>|</p>
-                <button class="btn" type="submit"><i class="bi bi-search"></i></button>
+                <button class="btn" type="submit" name="cari"><i class="bi bi-search"></i></button>
             </form>
 
         </div>
@@ -58,7 +67,7 @@ $obat = query("SELECT * FROM item");
                                             <div class="col-4">
                                                 <div class="p-3">
                                                     <div class="card ">
-                                                        <img src="../../../../image/obat/<?= $row["gambar"]; ?>" class="card-img-top" alt="...">
+                                                        <img src="../../../../image/dataFoto/<?= $row["gambar"]; ?>" class="card-img-top" alt="...">
                                                         <div class="card-body">
                                                             <h5 class="card-title"><?= $row["nama"]; ?></h5>
                                                             <a href="../../Item_UI/Item Details/item_details.php?id=<?= $row["id"]; ?>" class="btn btn-primary">Cek Details</a>

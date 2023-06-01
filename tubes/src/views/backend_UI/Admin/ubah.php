@@ -3,7 +3,6 @@ require('../../../partials/functions/functions.php');
 
 //ambil data dari url
 $id = $_GET["id"];
-var_dump($id);
 //query data item berdasarkan id
 $ubah_item = query("SELECT * FROM item WHERE id = $id")[0];
 
@@ -13,18 +12,18 @@ if (isset($_POST["submit"])) {
 
 
     //cek data berhasil ditambahkan atau tidak
-    if (tambah($_POST) > 0) {
+    if (ubah($_POST) > 0) {
         echo "
         <script>
-        alert('data berhasil ditambahkan!');
-        document.location.href = 'admin.php';
+        alert('data berhasil diubah!');
+        document.location.href = 'edit.php';
         </script>
     ";
     } else {
         echo "
         <script>
-        alert('data gagal ditambahkan!');
-        document.location.href = 'admin.php';
+        alert('data gagal diubah!');
+        document.location.href = 'edit.php';
         </script>
     ";
     }
@@ -52,14 +51,15 @@ if (isset($_POST["submit"])) {
     <?php require('../../../partials/navbar/navbar.php'); ?>
 
     <div class="container-fluid d-flex justify-content-center ">
-        <form action="" method="post" style="width: 1000px;">
-            <div class="mb-3">
+        <form action="" method="post" style="width: 1000px;" enctype="multipart/form-data">
 
-                <input type="hidden" class="form-control" id="id" name="id" value="<?= $ubah_item["id"]; ?>">
-            </div>
+            <input type="hidden" id="id" name="id" value="<?= $ubah_item["id"]; ?>">
+            <input type="hidden" name="gambarLama" value="<?= $ubah_item["gambar"]; ?>">
+
             <div class="mb-3">
-                <label for="gambar" class="form-label">Gambar</label>
-                <input type="text" class="form-control" id="gambar" name="gambar" value="<?= $ubah_item["gambar"]; ?>">
+                <label for="gambar" class="form-label">Gambar</label> <br>
+                <img src="../../../../image/dataFoto/<?= $ubah_item["gambar"]; ?>" alt="" width="100">
+                <input type="file" class="form-control" id="gambar" name="gambar" value="<?= $ubah_item["gambar"]; ?>">
             </div>
             <div class="mb-3">
                 <label for="nama" class="form-label">Nama Obat</label>
@@ -67,11 +67,11 @@ if (isset($_POST["submit"])) {
             </div>
             <div class="mb-3">
                 <label for="deskripsi" class="form-label">Deskripsi</label>
-                <textarea type="text" class="form-control" id="deskripsi" rows="3" name="deskripsi" value="<?= $ubah_item["deskripsi"]; ?>"></textarea>
+                <textarea type="text" class="form-control" id="deskripsi" rows="3" name="deskripsi" value="<?= $ubah_item["deskripsi"]; ?>"><?= $ubah_item["deskripsi"]; ?></textarea>
             </div>
             <div class="mb-3">
                 <label for="indikasi_umum" class="form-label">Indikasi Umum</label>
-                <textarea type="text" class="form-control" id="indikasi_umum" rows="3" name="indikasi_umum" value="<?= $ubah_item["indikasi_umum"]; ?>"></textarea>
+                <textarea type="text" class="form-control" id="indikasi_umum" rows="3" name="indikasi_umum" value="<?= $ubah_item["indikasi_umum"]; ?>"><?= $ubah_item["indikasi_umum"]; ?></textarea>
             </div>
             <div class="mb-3">
                 <label for="komposisi" class="form-label">Komposisi</label>
@@ -79,27 +79,27 @@ if (isset($_POST["submit"])) {
             </div>
             <div class="mb-3">
                 <label for="aturan_pakai" class="form-label">Aturan Pakai</label>
-                <textarea type="text" class="form-control" id="aturan_pakai" rows="3" name="aturan_pakai" value="<?= $ubah_item["aturan_pakai"]; ?>"></textarea>
+                <textarea type="text" class="form-control" id="aturan_pakai" rows="3" name="aturan_pakai" value="<?= $ubah_item["aturan_pakai"]; ?>"><?= $ubah_item["aturan_pakai"]; ?></textarea>
             </div>
             <div class="mb-3">
                 <label for="perhatian" class="form-label">Perhatian</label>
-                <textarea type="text" class="form-control" id="perhatian" rows="3" name="perhatian" value="<?= $ubah_item["perhatian"]; ?>"></textarea>
+                <textarea type="text" class="form-control" id="perhatian" rows="3" name="perhatian" value="<?= $ubah_item["perhatian"]; ?>"><?= $ubah_item["perhatian"]; ?></textarea>
             </div>
             <div class="mb-3">
                 <label for="kontra_indikasi" class="form-label">Kontra Indikasi</label>
-                <textarea type="text" class="form-control" id="kontra_indikasi" rows="3" name="kontra_indikasi" value="<?= $ubah_item["kontra_indikasi"]; ?>"></textarea>
+                <textarea type="text" class="form-control" id="kontra_indikasi" rows="3" name="kontra_indikasi" value="<?= $ubah_item["kontra_indikasi"]; ?>"><?= $ubah_item["kontra_indikasi"]; ?></textarea>
             </div>
             <div class="mb-3">
                 <label for="efek_samping" class="form-label">Efek Samping</label>
-                <textarea type="text" class="form-control" id="efek_samping" rows="3" name="efek_samping" value="<?= $ubah_item["efek_samping"]; ?>"></textarea>
+                <textarea type="text" class="form-control" id="efek_samping" rows="3" name="efek_samping" value="<?= $ubah_item["efek_samping"]; ?>"><?= $ubah_item["efek_samping"]; ?></textarea>
             </div>
             <div class="mb-3">
                 <label for="golongan_produk" class="form-label">Golongan Produk</label>
-                <textarea type="text" class="form-control" id="golongan_produk" rows="3" name="golongan_produk" value="<?= $ubah_item["golongan_produk"]; ?>"></textarea>
+                <textarea type="text" class="form-control" id="golongan_produk" rows="3" name="golongan_produk" value="<?= $ubah_item["golongan_produk"]; ?>"><?= $ubah_item["golongan_produk"]; ?></textarea>
             </div>
             <div class="mb-3">
                 <label for="kemasan" class="form-label">Kemasan</label>
-                <textarea type="text" class="form-control" id="kemasan" rows="3" name="kemasan" value="<?= $ubah_item["kemasan"]; ?>"></textarea>
+                <textarea type="text" class="form-control" id="kemasan" rows="3" name="kemasan" value="<?= $ubah_item["kemasan"]; ?>"><?= $ubah_item["kemasan"]; ?></textarea>
             </div>
             <div class="mb-3">
                 <label for="manufaktur" class="form-label">Manufaktur</label>

@@ -56,7 +56,7 @@ $obat = query("SELECT * FROM item");
                                             <div class="col-4">
                                                 <div class="p-3">
                                                     <div class="card ">
-                                                        <img src="../../../../image/obat/<?= $row["gambar"]; ?>" class="card-img-top" alt="...">
+                                                        <img src="../../../../image/dataFoto/<?= $row["gambar"]; ?>" class="card-img-top" alt="...">
                                                         <div class="card-body">
                                                             <h5 class="card-title"><?= $row["nama"]; ?></h5>
                                                             <a href="ubah.php?id=<?= $row["id"]; ?>" class="btn btn-warning">Ubah</a> | <a href="hapus.php?id=<?= $row["id"]; ?>" class="btn btn-danger" onclick="return confirm('anda yakin ?');">Hapus</a>

@@ -44,10 +44,10 @@ if (isset($_POST["submit"])) {
     <?php require('../../../partials/navbar/navbar.php'); ?>
 
     <div class="container-fluid d-flex justify-content-center ">
-        <form action="" method="post" style="width: 1000px;">
+        <form action="" method="post" style="width: 1000px;" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="gambar" class="form-label">Gambar</label>
-                <input type="text" class="form-control" id="gambar" name="gambar">
+                <input type="file" class="form-control" id="gambar" name="gambar">
             </div>
             <div class="mb-3">
                 <label for="nama" class="form-label">Nama Obat</label>

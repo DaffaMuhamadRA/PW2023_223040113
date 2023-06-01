@@ -22,18 +22,17 @@ bag 2 (Penyelarasan UI)
 bag 3 (Back end)
 
 easy :
-- Tampil : Data tampil pada halaman user (back-end), halaman admin (front-end) dan 
-ada halaman detail / profile. (done)
+- Tampil : Data tampil pada halaman user (back-end), halaman admin (front-end) dan ada halaman detail / profile. (done)
 • Insert : Bisa menambah data lewat halaman admin. (done)
 • Update : Bisa mengubah data lewat halaman admin.  (done)
 • Delete : Bisa menghapus data lewat halaman admin. (done)
-• Search : Bisa mencari data pada halaman admin dan halaman user.
-• web bisa mengupload foto (bisa melakukan validasi terhadap jenis foto).
+• Search : Bisa mencari data pada halaman admin dan halaman user. (done)
+• web bisa mengupload foto (bisa melakukan validasi terhadap jenis foto). (done)
 • Minimal 1 table pada database. (done)
 • Upload ke github (done)
 
 medium :
-- Mengerjakan tingkatan easy.
+- Mengerjakan tingkatan easy. (done)
 • Ada fungsi login, logout & registrasi (untuk admin).
 • Menambahkan tabel user. 
 • Mengaplikasikan fungsi live searching.
