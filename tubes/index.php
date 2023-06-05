@@ -1,3 +1,65 @@
+<?php
+session_start();
+require 'src/partials/functions/functions.php';
+
+//cek cookie
+if (isset($_COOKIE['login']) && isset($_COOKIE['key'])) {
+    $id = $_COOKIE['id'];
+    $key = $_COOKIE['key'];
+
+    //ambil usename berdasarkan id
+    $result = mysqli_query($conn, "SELECT username FROM user WHERE id = $id");
+    $row = mysqli_fetch_assoc($result);
+
+
+    //cek cookie dan username
+
+    if ($key === hash('sha256', $row['username'])) {
+        $_SESSION['login'] = true;
+    }
+}
+
+if (isset($_SESSION["login"])) {
+    header("Location: src/views/backend_UI/Admin/admin.php");
+    exit;
+}
+
+
+if (isset($_POST["login"])) {
+
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+
+    $result = mysqli_query($conn, "SELECT * FROM user WHERE username = '$username' ");
+
+
+    //cek username
+    if (mysqli_num_rows($result) === 1) {
+
+        //cek password
+        $row = mysqli_fetch_assoc($result);
+        if (password_verify($password, $row["password"])) {
+
+            //set session
+            $_SESSION["login"] = true;
+
+            //cek remember me
+            if (isset($_POST["remember"])) {
+                //buat cookie
+
+                setcookie('id', $row['id'], time() + 60);
+                setcookie('key', hash('sha256', $row['username']), time() + 60);
+            }
+
+            header("Location: src/views/backend_UI/Admin/admin.php");
+            exit;
+        }
+    }
+
+    $error = true;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,45 +100,41 @@
 
                     <div class="card bg-glass">
                         <div class="card-body px-4 py-5 px-md-5">
-                            <form>
+                            <form action="" method="post">
                                 <!-- 2 column grid layout with text inputs for the first and last names -->
 
                                 <!-- Email input -->
                                 <div class="form-outline mb-4">
-                                    <input type="email" id="form3Example3" class="form-control" />
-                                    <label class="form-label" for="form3Example3">Username / Email</label>
+                                    <input type="text" id="username" name="username" class="form-control" />
+                                    <label class="form-label" for="username">Username</label>
                                 </div>
 
                                 <!-- Password input -->
                                 <div class="form-outline mb-4">
-                                    <input type="password" id="form3Example4" class="form-control" />
-                                    <label class="form-label" for="form3Example4">Password</label>
+                                    <input type="password" id="password" name="password" class="form-control" />
+                                    <label class="form-label" for="passsword">Password</label>
+                                </div>
+
+                                <!-- cookie -->
+                                <!-- <div class="form-outline mb-4">
+                                    <input type="checkbox" id="remember" name="remember" class="form-control" />
+                                    <label class="form-label" for="remember">Remember me</label>
+                                </div> -->
+
+                                <div class="btn d-flex mx-auto mb-4 justify-content-center" role="group" aria-label="Basic checkbox toggle button group">
+                                    <input type="checkbox" class="btn-check" id="remember" name="remember" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="remember">Remember me!</label>
                                 </div>
 
                                 <!-- log-in -->
-                                <button type="submit" class="btn d-flex btn-primary btn-block mb-4 mx-auto">
+                                <button type="submit" name="login" class="btn d-flex btn-primary btn-block mb-4 mx-auto">
                                     Log-in
                                 </button>
 
-                                <h6 class="text-center dont-have-acc">Don't Have an account ? <a href="src/views/Sign-up/Sign-up.html">Sign
+                                <h6 class="text-center dont-have-acc">Don't Have an account ? <a href="src/views/Sign-up/Sign-up.php">Sign
                                         up</a></h6>
 
                                 <!-- Register buttons -->
-                                <div class="text-center">
-
-                                    <p class="p-or-sign">- Or Sign Up With -</p>
-                                    <button type="button" class="btn btn-link btn-floating mx-1">
-                                        <i class="bi bi-facebook"></i>
-                                    </button>
-
-                                    <button type="button" class="btn btn-link btn-floating mx-1">
-                                        <i class="bi bi-google"></i>
-                                    </button>
-
-                                    <button type="button" class="btn btn-link btn-floating mx-1">
-                                        <i class="bi bi-twitter"></i>
-                                    </button>
-                                </div>
                             </form>
                         </div>
                     </div>

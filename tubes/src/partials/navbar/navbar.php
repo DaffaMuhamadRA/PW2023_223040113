@@ -84,7 +84,7 @@
             <li><a class="dropdown-item" href="#"><i class="bi bi-gear"></i> Setting</a></li>
             <li><a class="dropdown-item" href="#"><i class="bi bi-people-fill"></i> Switch account</a>
             </li>
-            <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right"></i> Sign out</a>
+            <li><a class="dropdown-item" href="../../../partials/logout/logout.php"><i class="bi bi-box-arrow-right"></i> Sign out</a>
             </li>
           </ul>
         </div>
