@@ -9,7 +9,23 @@ if (!isset($_SESSION["login"])) {
 
 require '../../../partials/functions/functions.php';
 
-$obat = query("SELECT * FROM item");
+//pagination
+//konfigurasi
+$jumlahDataPerHalaman = 2;
+$jumlahData = count(query("SELECT * FROM item"));
+$jumlahHalaman = ceil($jumlahData / $jumlahDataPerHalaman);
+$halamanAktif = (isset($_GET["halaman"])) ? $_GET["halaman"] : 1;
+//jika halaman ada variabel halaman, maka gunakan halaman. jika tidak maka halaman isi variabel angka 1;
+$awalData = ($jumlahDataPerHalaman * $halamanAktif) - $jumlahDataPerHalaman;
+
+
+
+$obat = query("SELECT * FROM item LIMIT $awalData, $jumlahDataPerHalaman");
+
+//pagination search
+
+
+//kategorikal
 
 
 //tombol cari ditekan
@@ -52,7 +68,7 @@ if (isset($_POST["cari"])) {
         </div>
     </div>
     <!-- ----------------------------------- menu -->
-    <div class="main_menu  ">
+    <div class="main_menu " id="item_menu">
         <div class="container-fluid d-flex justify-content-center main_menu_container">
 
             <div class="navbar_menu">
@@ -66,7 +82,9 @@ if (isset($_POST["cari"])) {
                                 <?php require("../../../partials/collapse/collapse.php"); ?>
                             </div>
                             <div class="col-lg-8 bagian-card" style="border: #a1eafb 2px solid;">
-                                <!-- container -->
+
+
+                                <!-- container item -->
                                 <div class="container text-center">
                                     <div class="row g-3 bagian-card-item">
 
@@ -93,11 +111,30 @@ if (isset($_POST["cari"])) {
                                         <!-- pagination -->
                                         <nav aria-label="Page navigation example ">
                                             <ul class="pagination d-flex justify-content-center">
-                                                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+
+                                                <?php if ($halamanAktif > 1) : ?>
+                                                    <li class="page-item"><a class="page-link" href="?halaman=<?= $halamanAktif - 1; ?>#item_menu">Previous</a></li>
+                                                <?php endif; ?>
+
+
+
+                                                <?php for ($i = 1; $i <= $jumlahHalaman; $i++) : ?>
+                                                    <?php if ($i == $halamanAktif) : ?>
+
+                                                        <li class="page-item"><a class="page-link" href="?halaman=<?= $i; ?>#item_menu" style="color:red;"> <?= $i; ?> </a></li>
+
+                                                    <?php else : ?>
+
+                                                        <li class="page-item"><a class="page-link" href="?halaman=<?= $i; ?>#item_menu"> <?= $i; ?> </a></li>
+                                                    <?php endif; ?>
+                                                <?php endfor; ?>
+
+
+
+                                                <?php if ($halamanAktif < $jumlahHalaman) : ?>
+                                                    <li class="page-item"><a class="page-link" href="?halaman=<?= $halamanAktif + 1; ?>#item_menu"> Next </a></li>
+                                                <?php endif; ?>
+
                                             </ul>
                                         </nav>
                                     </div>

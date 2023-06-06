@@ -1,9 +1,11 @@
 note :
 
+on-going now ! : live search - ajax
+
+
+
+
 Pr buat tubes website
-
-on-going now ! : session
-
 
 bag 1 (UI Build)
 
@@ -33,9 +35,9 @@ easy :
 
 medium :
 - Mengerjakan tingkatan easy. (done)
-• Ada fungsi login, logout & registrasi (untuk admin).
+• Ada fungsi login, logout & registrasi (untuk admin). (done)
 • Menambahkan tabel user. (done)
-• Mengaplikasikan fungsi live searching.
+• Mengaplikasikan fungsi live searching. (on going)
 • Menggunakan relasi antar tabel (tambah 1 tabel baru).
 
 hard :
@@ -45,4 +47,5 @@ hard :
 • Mengurutkan data yang ditampilkan sesuai urutan sesuai kategori.
 
 bag 4 (penambahan)
-- Cookie
+- Fitur Cookie
+- Pagination
