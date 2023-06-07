@@ -37,7 +37,7 @@ medium :
 - Mengerjakan tingkatan easy. (done)
 • Ada fungsi login, logout & registrasi (untuk admin). (done)
 • Menambahkan tabel user. (done)
-• Mengaplikasikan fungsi live searching. (on going)
+• Mengaplikasikan fungsi live searching. (done)
 • Menggunakan relasi antar tabel (tambah 1 tabel baru).
 
 hard :
@@ -49,3 +49,4 @@ hard :
 bag 4 (penambahan)
 - Fitur Cookie
 - Pagination
+- dinamic username

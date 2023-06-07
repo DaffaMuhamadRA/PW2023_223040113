@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 require 'src/partials/functions/functions.php';
 
 //cek cookie
@@ -36,8 +36,11 @@ if (isset($_POST["login"])) {
     //cek username
     if (mysqli_num_rows($result) === 1) {
 
+        session_start();
         //cek password
         $row = mysqli_fetch_assoc($result);
+        $_SESSION['username'] = $row['username'];
+
         if (password_verify($password, $row["password"])) {
 
             //set session
@@ -50,6 +53,7 @@ if (isset($_POST["login"])) {
                 setcookie('id', $row['id'], time() + 60);
                 setcookie('key', hash('sha256', $row['username']), time() + 60);
             }
+
 
             header("Location: src/views/backend_UI/Admin/admin.php");
             exit;

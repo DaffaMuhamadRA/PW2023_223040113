@@ -75,7 +75,7 @@
         </div>
         <div class="dropdown u-drop">
           <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="bi bi-person-circle"> User</i>
+            <i class="bi bi-person-circle"> <?= $_SESSION['username']; ?></i>
           </button>
           <ul class="dropdown-menu account-drop">
             <li><a class="dropdown-item" href="#"><i class="bi bi-person-bounding-box"></i> Your

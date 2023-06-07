@@ -1,11 +1,17 @@
 <?php
 session_start();
 
+if (!isset($_SESSION['username'])) {
+    echo "gagal username";
+}
 
 if (!isset($_SESSION["login"])) {
     header("Location: ../../../../index.php");
     exit;
 }
+
+
+
 
 require '../../../partials/functions/functions.php';
 
@@ -22,6 +28,7 @@ $awalData = ($jumlahDataPerHalaman * $halamanAktif) - $jumlahDataPerHalaman;
 
 $obat = query("SELECT * FROM item LIMIT $awalData, $jumlahDataPerHalaman");
 
+
 //pagination search
 
 
@@ -33,7 +40,6 @@ $obat = query("SELECT * FROM item LIMIT $awalData, $jumlahDataPerHalaman");
 if (isset($_POST["cari"])) {
     $obat = cari($_POST["keyword"]);
 }
-
 
 ?>
 
@@ -56,19 +62,20 @@ if (isset($_POST["cari"])) {
     <!-- ----------------------------------------------------------------------------------------- navbar -->
     <?php require('../../../partials/navbar/navbar.php'); ?>
     <!-- ----------------------------------------------------------------------------------------- home page -->
-    <!-- hero image -->
+    <!-- searchbar -->
     <div class="heroimage">
         <div class="color-overlay d-flex justify-content-center align-items-center">
             <form action="" class="search-bar" method="post">
-                <input type="text" placeholder="search medicine" name="keyword" autocomplete="off">
+                <input type="text" placeholder="search medicine" name="keyword" autocomplete="off" id="keyword">
                 <p>|</p>
-                <button class="btn" type="submit" name="cari"><i class="bi bi-search"></i></button>
+                <button class="btn" type="submit" name="cari"><i class="bi bi-search" id="tombol-cari"></i></button>
             </form>
 
         </div>
     </div>
     <!-- ----------------------------------- menu -->
-    <div class="main_menu " id="item_menu">
+
+    <div class="main_menu " id="item_menu ">
         <div class="container-fluid d-flex justify-content-center main_menu_container">
 
             <div class="navbar_menu">
@@ -85,7 +92,7 @@ if (isset($_POST["cari"])) {
 
 
                                 <!-- container item -->
-                                <div class="container text-center">
+                                <div class="container text-center" id="container">
                                     <div class="row g-3 bagian-card-item">
 
 
@@ -213,6 +220,7 @@ if (isset($_POST["cari"])) {
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous">
         </script>
+        <script src="../../../js/script.js"></script>
 </body>
 
 </html>
