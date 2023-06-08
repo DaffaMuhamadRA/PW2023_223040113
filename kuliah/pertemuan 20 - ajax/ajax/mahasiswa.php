@@ -2,7 +2,7 @@
 require '../functions.php';
 
 $keyword =$_GET["keyword"];
-$query = $query = "SELECT * FROM mahasiswa 
+$query =  "SELECT * FROM mahasiswa 
                         WHERE
                         nama LIKE '%$keyword%' OR
                         nrp LIKE '%$keyword%' OR

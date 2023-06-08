@@ -42,7 +42,7 @@ medium :
 
 hard :
 • Mengerjakan tingkatan easy & medium.
-• PDF Reporting.
+• PDF Reporting. (done)
 • Web Hosting.
 • Mengurutkan data yang ditampilkan sesuai urutan sesuai kategori.
 

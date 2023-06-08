@@ -11,7 +11,7 @@
 
 
     <li class="nav-item">
-        <a class="nav-link" href="#">Log</a>
+        <a class="nav-link" href="cetak.php">Print All Items</a>
     </li>
 
 
