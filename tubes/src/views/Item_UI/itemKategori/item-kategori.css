@@ -35,12 +35,6 @@
         color: black;
     }
 
-    .form-control {
-        font-size: 16px;
-        margin-top: 2px;
-        width: 200px;
-        height: 40px;
-    }
 
     .dropdown-item:hover {
         color: white;
@@ -63,52 +57,44 @@
         color: #e74c3c;
     }
 
-    /* ------------ account navbar */
-    .account a {
-        text-decoration: none;
-        list-style-type: none;
-        color: white;
-        text-decoration: none;
-    }
-
-
-    .account p {
-        font-size: 20px;
-        border: 10px;
-        border-color: red;
-    }
-
-    .account a:hover {
-        color: #f8f7f7;
-    }
-
-    /* .submit-btn i {
-      color: white;
-    } */
-
-    /* .submit-btn i:hover {
-      color: rgb(192, 192, 241);
-    } */
 
     .navbar-collapse {
-        margin-right: 300px;
+        margin-right: 200px;
     }
 
-    /* .account button {
-    color: #e74c3c;
-    border-color: #e74c3c;
-  } */
+    /* --------------------------------- m-e right navbar */
+    .notif button {
+        border-radius: 50%;
+        margin-right: 10px;
+    }
 
-    .log {
-        text-align: center !important;
-        width: 60px;
-        height: 30px;
+    .u-drop button {
+        color: white;
         background-color: #f7341e;
-        border-radius: 10%;
     }
 
-    .log:hover {
-        background-color: #920f00;
+    .u-drop button:hover {
+        color: rgb(221, 219, 219);
+        background-color: #dd1e09;
+    }
+
+
+
+
+    .notif button {
+        color: white;
+        margin-top: 10px;
+        background-color: #f7341e;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+
+    .n-button :hover {
+        margin-top: 10px;
+        color: rgb(221, 219, 219);
+        background-color: #dd1e09;
+        border-radius: 50%;
+        margin-bottom: 10px;
     }
 
     /* ----------------------------------------------------------------- ITEM KATEGORI */
@@ -116,7 +102,7 @@
     .bgcolor {
         display: flex;
         position: relative;
-        height: 2000px;
+        height: 700px;
         background-color: rgb(245, 245, 245);
     }
 
@@ -133,9 +119,9 @@
     /* --------------------------------------------- item-list */
     .container-item {
         background-color: rgb(255, 255, 255);
-        border: red 2px solid;
+        /* border: red 2px solid; */
         border-radius: 10px;
-        height: 1500px;
+        height: 500px;
         position: absolute;
         margin-left: auto;
         margin-right: auto;
@@ -147,27 +133,32 @@
     }
 
     .item-list {
-        border: red 2px solid;
-        display: grid;
+
+        display: flex;
+        width: 50%;
+        position: relative;
+        justify-items: center;
     }
 
-    /* .item-list a {
+    .item-list a {
         width: 700px;
         height: 50px;
         background-color: yellow;
-        border: #f7341e 2px solid;
+
         color: black;
-    } */
+    }
+
+    .item-list-menu {}
 
     .bgcolor h5 {
-        position: relative;
+        position: absolute;
     }
 
 
     /* ---------------------------------- input-group  */
     .input-group {
         margin-top: 20px;
-        border: blue 2px solid;
+        /* border: blue 2px solid; */
         margin-left: auto;
         margin-right: auto;
         left: 0;
@@ -195,72 +186,27 @@
         color: white;
     }
 
-    /* ------------------------------------------------- grid kiri - grid kanan */
-    .grid-utama {
-        border: red 2px solid;
-        height: 1300px;
+    /* ------------------------------------------------- kategori obat */
+    .kategori-obat {
+        /* border: #f7341e 2px solid; */
+        margin-top: 30px;
+        margin-left: 20px;
     }
 
-    .grid-kiri {
-
-        border: blue 2px solid;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .grid-kanan {
-        border: purple 2px solid;
-    }
-
-    /* ------------------------------------------------- grid kiri */
-    .container-grid-kiri {
-        border: #a2afb4 2px solid;
-        border-radius: 5px;
-        margin-top: 50px;
-        height: 1000px;
-        box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.8);
-        margin-left: 5px;
-    }
-
-    .container-grid-kiri h5 {
-        margin-top: 10px;
-        margin-left: 10px;
-    }
-
-    /* ------------------------------------------------- drop down */
-    .dropdown-container {
-        margin-top: 50px;
-        border: #a2afb4 2px solid;
-    }
-
-    .dropdown-container button {
-        width: 100%;
+    .kategori-obat h2 {
         text-align: start;
     }
 
-    /* -------------------------------------------------- accordion slide item */
-    .accordion-slide-item {
-        margin-top: 50px;
-    }
-
-    /* -------------------------------------------------- a href slide item */
-    .accordion-body a {
-        background-color: white;
+    .kategori-obat a {
         text-decoration: none;
         color: black;
     }
 
-    /* --------------------------------------------------------------------------------------------------- Grid kanan */
-    .grid-kanan {}
-
-    .judul-obat {
-        margin-top: 20px;
-    }
-
-    .grid-kanan-item .row .col {
+    /* -------------------------------------------------- item grid */
+    .item-grid1 {
         margin-top: 50px;
+        text-align: left;
     }
-
 }
 
 

@@ -2,8 +2,9 @@
 
 require 'src/partials/functions/functions.php';
 
+
 //cek cookie
-if (isset($_COOKIE['login']) && isset($_COOKIE['key'])) {
+if (isset($_COOKIE['id']) && isset($_COOKIE['key'])) {
     $id = $_COOKIE['id'];
     $key = $_COOKIE['key'];
 
@@ -15,16 +16,16 @@ if (isset($_COOKIE['login']) && isset($_COOKIE['key'])) {
     //cek cookie dan username
 
     if ($key === hash('sha256', $row['username'])) {
-        $_SESSION['login'] = true;
+        $_SESSION["login"] = true;
     }
 }
 
-if (isset($_SESSION["login"])) {
-    header("Location: src/views/backend_UI/Admin/admin.php");
-    exit;
-}
+// if (isset($_SESSION["login"])) {
+//     header("Location: src/views/backend_UI/Admin/admin.php");
+//     exit;
+// }
 
-
+$err = "";
 if (isset($_POST["login"])) {
 
     $username = $_POST["username"];
@@ -54,9 +55,28 @@ if (isset($_POST["login"])) {
                 setcookie('key', hash('sha256', $row['username']), time() + 60);
             }
 
+            if (empty($err)) {
 
-            header("Location: src/views/backend_UI/Admin/admin.php");
-            exit;
+                $login_id = $row['id_user'];
+                $sql1 = "SELECT * FROM admin_akses WHERE id_user ='$login_id'";
+                $q1 = mysqli_query($conn, $sql1);
+
+                while ($row = mysqli_fetch_array($q1)) {
+                    $akses[] = $row['id_user'];
+                }
+                if (empty($akses)) {
+                    $err .= "<li>kamu tidak punya akses admin</li>";
+                }
+            }
+            if (empty($err)) {
+                $_SESSION['user'] = $username;
+                $_SESSION['admin_akses'] = $akses;
+
+                header("Location: src/views/backend_UI/Admin/admin.php");
+                exit;
+            } else {
+                header("Location: src/views/backend_UI/User/user.php");
+            }
         }
     }
 
@@ -86,15 +106,12 @@ if (isset($_POST["login"])) {
 
             <div class="row gx-lg-5 align-items-center mb-5">
                 <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
-                    <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(0, 0%, 99%)">
+                    <h1 class="my-5 display-5 fw-bold ls-tight " style="color: hsl(0, 0%, 99%)">
                         HealthCare <br />
                         <span style="color: hsl(218, 56%, 47%)">for your Healthy</span>
                     </h1>
                     <p class="mb-4 opacity-70" style="color: hsl(0, 0%, 0%)">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        Temporibus, expedita iusto veniam atque, magni tempora mollitia
-                        dolorum consequatur nulla, neque debitis eos reprehenderit quasi
-                        ab ipsum nisi dolorem modi. Quos?
+                        Healthcare adalah platform kesehatan yang memberikan informasi medis terpercaya, tips gaya hidup sehat, penelitian terkini, dan panduan pengelolaan kesehatan untuk meningkatkan kualitas hidup secara holistik dan menyeluruh. Kami berkomitmen untuk memberikan pelayanan terbaik kepada pengguna kami.
                     </p>
                 </div>
 
@@ -104,6 +121,7 @@ if (isset($_POST["login"])) {
 
                     <div class="card bg-glass">
                         <div class="card-body px-4 py-5 px-md-5">
+
                             <form action="" method="post">
                                 <!-- 2 column grid layout with text inputs for the first and last names -->
 
@@ -118,6 +136,16 @@ if (isset($_POST["login"])) {
                                     <input type="password" id="password" name="password" class="form-control" />
                                     <label class="form-label" for="passsword">Password</label>
                                 </div>
+                                <?php
+                                if (isset($error)) : ?>
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-6">
+                                            <div class="alert alert-danger" role="alert">
+                                                Username / Password Salah
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php endif; ?>
 
                                 <!-- cookie -->
                                 <!-- <div class="form-outline mb-4">
@@ -127,7 +155,7 @@ if (isset($_POST["login"])) {
 
                                 <div class="btn d-flex mx-auto mb-4 justify-content-center" role="group" aria-label="Basic checkbox toggle button group">
                                     <input type="checkbox" class="btn-check" id="remember" name="remember" autocomplete="off">
-                                    <label class="btn btn-outline-primary" for="remember">Remember me!</label>
+                                    <label class="btn btn-outline-warning" for="remember">Remember me!</label>
                                 </div>
 
                                 <!-- log-in -->

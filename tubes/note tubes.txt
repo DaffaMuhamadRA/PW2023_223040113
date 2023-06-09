@@ -1,6 +1,6 @@
 note :
 
-on-going now ! : live search - ajax
+on-going now ! : Hosting
 
 
 
@@ -38,15 +38,17 @@ medium :
 • Ada fungsi login, logout & registrasi (untuk admin). (done)
 • Menambahkan tabel user. (done)
 • Mengaplikasikan fungsi live searching. (done)
-• Menggunakan relasi antar tabel (tambah 1 tabel baru).
+• Menggunakan relasi antar tabel (tambah 1 tabel baru). (done)
 
 hard :
-• Mengerjakan tingkatan easy & medium.
+• Mengerjakan tingkatan easy & medium. (done)
 • PDF Reporting. (done)
 • Web Hosting.
-• Mengurutkan data yang ditampilkan sesuai urutan sesuai kategori.
+• Mengurutkan data yang ditampilkan sesuai urutan sesuai kategori. (done)
 
 bag 4 (penambahan)
 - Fitur Cookie
 - Pagination
 - dinamic username
+
+#2a9df4

@@ -8,11 +8,11 @@
         </h2>
         <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
             <div class="accordion-body text-start">
-                <a class="" href="#">Batuk & Flu</a> <br> <br>
-                <a class="" href="#">Balsem & Minyal Esensial</a> <br> <br>
-                <a class="" href="#">Nasal Spray & Dekongestan</a> <br> <br>
-                <a class="" href="#">Untuk Bayi & Anak</a> <br> <br>
-                <a class="" href="#">Perawatan Herbal</a>
+                <a class="" href="?kategori=batuk dan flu#item_menu">Batuk & Flu</a> <br> <br>
+                <a class="" href="?kategori=balsem dan minyak esensial#item_menu">Balsem & Minyal Esensial</a> <br> <br>
+                <a class="" href="?kategori=nasal spray dan deskongestan#item_menu">Nasal Spray & Dekongestan</a> <br> <br>
+                <a class="" href="?kategori=untuk bayi dan anak#item_menu">Untuk Bayi & Anak</a> <br> <br>
+                <a class="" href="?kategori=perawatan herbal#item_menu">Perawatan Herbal</a>
             </div>
         </div>
     </div>
