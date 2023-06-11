@@ -35,7 +35,7 @@ if (!isset($_SESSION["login"])) {
     <div class="heroimage">
         <div class="color-overlay d-flex justify-content-center align-items-center">
             <form action="" class="search-bar">
-                <input type="text" placeholder="search medicine">
+                <input type="input" placeholder="search medicine">
                 <p>|</p>
                 <button class="btn" type="submit"><i class="bi bi-search"></i></button>
             </form>
