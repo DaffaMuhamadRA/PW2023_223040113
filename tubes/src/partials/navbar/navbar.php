@@ -9,7 +9,8 @@
     <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 justify-content-center">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="">Beranda</a>
+
+          <a class="nav-link active" aria-current="page" href="../../../../../tubes/src/views/backend_UI/Admin/admin.php">Beranda</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
