@@ -56,7 +56,7 @@ if (isset($_GET["cari"])) {
 
 <body>
     <!-- ----------------------------------------------------------------------------------------- navbar -->
-    <?php require '../../../partials/navbar/navbar.php'; ?>
+    <?php require '../../../partials/navbar/navbar_user.php'; ?>
     <!-- ----------------------------------------------------------------------------------------- item page -->
 
     <div class="bgcolor item-page">

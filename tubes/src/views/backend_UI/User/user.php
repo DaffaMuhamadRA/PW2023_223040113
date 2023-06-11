@@ -29,7 +29,7 @@ if (!isset($_SESSION["login"])) {
 
 <body>
     <!-- ----------------------------------------------------------------------------------------- navbar -->
-    <?php require("../../../partials/navbar/navbar.php"); ?>
+    <?php require("../../../partials/navbar/navbar_user.php"); ?>
     <!-- ----------------------------------------------------------------------------------------- home page -->
     <!-- hero image -->
     <div class="heroimage">
