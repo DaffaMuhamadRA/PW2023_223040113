@@ -1,6 +1,6 @@
 note :
 
-on-going now ! : Hosting
+on-going now ! : Done
 
 
 
@@ -17,8 +17,8 @@ bag 1 (UI Build)
 bag 2 (Penyelarasan UI)
 
 - responsive page (done)
-- color pallet gunain yang berpotensi memberikan kenyamanan mata pada user
-- icon profile ke lebih kananin - me 
+- color pallet gunain yang berpotensi memberikan kenyamanan mata pada user (done)
+- icon profile ke lebih kananin - me (done)
 - ganti html ke php (DRYS) -> (done)
 
 bag 3 (Back end)
@@ -43,12 +43,15 @@ medium :
 hard :
 • Mengerjakan tingkatan easy & medium. (done)
 • PDF Reporting. (done)
-• Web Hosting.
+• Web Hosting. (done)
 • Mengurutkan data yang ditampilkan sesuai urutan sesuai kategori. (done)
 
 bag 4 (penambahan)
-- Fitur Cookie
-- Pagination
-- dinamic username
+- Fitur Cookie (harus ada sedikit penyelarasan)
+- Pagination (done)
+- dinamic username (done)
 
-#2a9df4
+
+
+lain lain: 
+color nav :#2a9df4
