@@ -34,10 +34,10 @@ if (!isset($_SESSION["login"])) {
     <!-- hero image -->
     <div class="heroimage">
         <div class="color-overlay d-flex justify-content-center align-items-center">
-            <form action="" class="search-bar">
-                <input type="input" placeholder="search medicine">
+            <form action="../../Item_UI/itemList/item-list.php" class="search-bar" method="get">
+                <input type="text" placeholder="search medicine" name="keyword" autocomplete="off" id="keyword">
                 <p>|</p>
-                <button class="btn" type="submit"><i class="bi bi-search"></i></button>
+                <button class="btn" type="submit" name="cari"><i class="bi bi-search" id="tombol-cari"></i></button>
             </form>
             <!-- ------------------------- -->
             <!-- <h1>Hello world</h1>

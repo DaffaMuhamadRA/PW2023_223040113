@@ -29,6 +29,14 @@ if ($kategori) {
     $obat = query("SELECT * FROM item LIMIT $awalData, $jumlahDataPerHalaman");
 }
 
+//search
+
+
+if (isset($_GET["cari"])) {
+    $obat = cari($_GET["keyword"]);
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -73,7 +81,7 @@ if ($kategori) {
                     <!-- ---------------------------------------------------------------- Grid kanan -->
                     <div class="col-8 grid-kanan">
                         <div class="container container-grid-kanan">
-                            <h5 class="judul-obat"><?= $_GET['kategori']; ?></h5>
+                            <h5 class="judul-obat">Obat</h5>
                             <div class="container text-center grid-kanan-item">
                                 <div class="row">
                                     <?php foreach ($obat as $row) : ?>
