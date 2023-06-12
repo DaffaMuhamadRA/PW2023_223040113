@@ -3,7 +3,7 @@
         <div class="row text-center text-md-left">
             <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                 <h5 class="text-uppercase mb-4 font-weight-bold text-warning">HealthCare</h5>
-                <p>Companies operating in the health sector. As an intermediary between the world of health and customers.</p>
+                <p>Companies operating in the health sector. As information about drugs and other health.</p>
 
             </div>
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
